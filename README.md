@@ -42,8 +42,8 @@ Radio list + details. Order:
 
 | Preset | Notes |
 |---|---|
-| Земля–Луна | Loads **immediately** on select. Earth `N ≈ 1e13`; Moon mass = Earth × editable share (default `1/81.3`); astronomical length scale |
-| Солнечная система | Loads **immediately**. Sun + planets + major moons + main belt (~2.2–3.3 AU) + Kuiper (~30–48 AU) on full astronomical scale (`AU_RE ≈ 23455` R⊕). Belt masses `~3.3…~3.3e3` m_e (≪ planets) |
+| Земля–Луна | Loads **immediately** on select. Earth `N ≈ 1e13`, radius = 1 R⊕; Moon mass = Earth × editable share (default `1/81.3`), radius ≈ 0.273 R⊕; astronomical length scale |
+| Солнечная система | Loads **immediately**. Sun + planets + major moons + main belt (~2.2–3.3 AU) + Kuiper (~30–48 AU) on full `AU_RE ≈ 23455` R⊕ orbits. **Cosmic radii** independent of density (Sun ≈ 109 R⊕ ≫ planets ≫ moons ≫ belt `~5e-5…5e-3` R⊕). Belt masses `~3.3…~3.3e3` m_e |
 | Песочница | Loads **immediately**. Empty scene |
 | **мелкие фракции** | Last in the list; does **not** replace the scene. Count chooser **100 / 500 / 2000 / 5000** (default 2000); **применить** **appends** asteroid-like masses (`~3.3e2…~3.3e7` m_e) on top of the current scenario and turns **непроницаемые** on (you can turn it off afterward) |
 
@@ -52,7 +52,7 @@ Radio list + details. Order:
 ### Other tabs (short)
 
 - **Частицы** — add/remove p, n, e, atom, dipole, custom mass; `+ рандом`; spawn mode (orbit / rest / throw)
-- **Тяготение** — direct W = Q·N vs complex (КУО); G presets
+- **Тяготение** — direct W = Q·N vs complex (КУО); G default **1** (honest / 1 chips + log₁₀ slider; no «демо» preset)
 - **Расчёт** — time speed, CPU/GPU path, shaders
 - **Вид** — field / trails / orbits / labels / chamber wall; help
 
