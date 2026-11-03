@@ -52,7 +52,7 @@ Radio list + details. Order:
 ### Other tabs (short)
 
 - **Частицы** — add/remove p, n, e, atom, dipole, custom mass; `+ рандом`; spawn mode (orbit / rest / throw)
-- **Тяготение** — direct W = Q·N vs complex (КУО); G default **1** (honest / 1 chips + log₁₀ slider; no «демо» preset)
+- **Тяготение** — **комплексное (КУО) only** (no «прямое» mode); β scales + G default **1** (honest / 1 chips + log₁₀ slider)
 - **Расчёт** — time speed ×⅛…×1024 (default ×1); compute path default **GPU float** (авто / CPU / GPU double / GPU float); shaders
 - **Вид** — field / trails / orbits / labels / chamber wall; help
 
