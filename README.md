@@ -43,7 +43,7 @@ Radio list + details. Order:
 | Preset | Notes |
 |---|---|
 | Земля–Луна | Loads **immediately** on select. Earth `N ≈ 1e13`; Moon mass = Earth × editable share (default `1/81.3`); astronomical length scale |
-| Солнечная система | Loads **immediately**. Sun + planets + major moons + main belt (~2.2–3.3 AU) + Kuiper belt (~30–48 AU); asteroid-like masses; same astro scale |
+| Солнечная система | Loads **immediately**. Sun + planets + major moons + main belt (~2.2–3.3 AU) + Kuiper (~30–48 AU). Belt masses `1e1…1e4` m_e (≪ planets); demo AU packing so Sun ≫ planets ≫ belt on screen |
 | Песочница | Loads **immediately**. Empty scene |
 | **мелкие фракции** | Last in the list; does **not** replace the scene. Count chooser **100 / 500 / 2000 / 5000** (default 2000); **применить** **appends** asteroid-like masses (`~1e3…1e8` m_e) on top of the current scenario and turns **непроницаемые** on (you can turn it off afterward) |
 
