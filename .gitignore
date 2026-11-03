@@ -1,11 +1,15 @@
 # Application source — keep local; do not commit
 src/
 
-# Build outputs
-build/
+# Build outputs (keep the runnable JAR for clones without source)
+build/*
+!build/input/
+build/input/*
+!build/input/universal-interaction-formula.jar
 dist/
 *.class
 *.jar
+!build/input/universal-interaction-formula.jar
 *.war
 
 # IDE / local tooling
