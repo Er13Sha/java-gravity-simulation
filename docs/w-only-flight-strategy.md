@@ -67,8 +67,8 @@ No ScenePanel mouse logic required unless verification finds click/look conflict
 6. **Orbit** chip still toggles when ready.
 7. Skim Help / control note — no leftover “WASD” / A S D.
 
-## 7. Open questions for user
+## 7. Open questions for user — decided
 
-1. **Q / E:** keep world up/down, or remove so vertical is only via pitch + W?
-2. **S as reverse?** Explicitly out of scope (remove) — confirm no brake/reverse key is wanted.
-3. Should **W without mouse** stay “thrust along last look,” or require LMB for any flight? (Proposal: W alone is enough.)
+1. **Q / E:** **keep** world up/down.
+2. **S as reverse?** **No** — remove A/S/D entirely; no brake/reverse.
+3. **W without LMB:** **OK** — thrust along current look until the user aims again.
