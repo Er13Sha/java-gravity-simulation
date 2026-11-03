@@ -1,3 +1,27 @@
-build/
+# Application source тАФ keep local; do not commit
+src/
+
+# Build outputs (keep the runnable JAR for clones without source)
+build/*
+!build/input/
+build/input/*
+!build/input/universal-interaction-formula.jar
 dist/
-.claude
+*.class
+*.jar
+!build/input/universal-interaction-formula.jar
+*.war
+
+# IDE / local tooling
+.idea/
+*.iml
+.vscode/
+.claude/
+.classpath
+.project
+.settings/
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
