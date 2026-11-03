@@ -43,7 +43,7 @@ Radio list + details. Order:
 | Preset | Notes |
 |---|---|
 | Земля–Луна | Loads **immediately** on select. Earth `N ≈ 1e13`, radius = 1 R⊕; Moon mass = Earth × editable share (default `1/81.3`), radius ≈ 0.273 R⊕; astronomical length scale |
-| Солнечная система | Loads **immediately**. Sun + planets + major moons + main belt (~2.2–3.3 AU) + Kuiper (~30–48 AU) on full `AU_RE ≈ 23455` R⊕ orbits. **Cosmic radii** independent of density (Sun ≈ 109 R⊕ ≫ planets ≫ moons ≫ belt `~5e-5…5e-3` R⊕). Belt masses `~3.3…~3.3e3` m_e |
+| Солнечная система | Loads **immediately**. Sun + planets + major moons + main belt (~2.2–3.3 AU) + Kuiper (~30–48 AU) on full `AU_RE ≈ 23455` R⊕ orbits. **Cosmic radii** independent of density (Sun ≈ 109 R⊕ ≫ planets ≫ moons ≫ belt `~5e-5…5e-3` R⊕). Belt masses `~3.3…~3.3e3` m_e. **Visual classes** (STAR / PLANET+MOON / ASTEROID palette + mass-log sub-pixel halo; physics rad unchanged) |
 | Песочница | Loads **immediately**. Empty scene |
 | **мелкие фракции** | Last in the list; does **not** replace the scene. Count chooser **100 / 500 / 2000 / 5000** (default 2000); **применить** **appends** asteroid-like masses (`~3.3e2…~3.3e7` m_e) on top of the current scenario and turns **непроницаемые** on (you can turn it off afterward) |
 
