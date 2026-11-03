@@ -1,4 +1,4 @@
-# Application source тАФ keep local; do not commit
+# Application source — keep local; do not commit
 src/
 
 # Build outputs (keep the runnable JAR for clones without source)
