@@ -38,14 +38,14 @@ Always on the right: pause, reload, reset, time speed.
 
 ### Сценарий
 
-Radio list + details + **применить** (replaces all bodies). Order:
+Radio list + details. Order:
 
 | Preset | Notes |
 |---|---|
-| Земля–Луна | Earth `N ≈ 1e13`; Moon mass = Earth × editable share (default `1/81.3`); astronomical length scale |
-| Солнечная система | Sun + planets + major moons; same astro scale |
-| Песочница | Empty scene |
-| **мелкие фракции** | Last in the list; count chooser **100 / 500 / 2000 / 5000** (default 2000); continuous asteroid-like masses (`~1e3…1e8` m_e), not the particle `+ рандом` pool; **применить** turns **непроницаемые** on (you can turn it off afterward) |
+| Земля–Луна | Loads **immediately** on select. Earth `N ≈ 1e13`; Moon mass = Earth × editable share (default `1/81.3`); astronomical length scale |
+| Солнечная система | Loads **immediately**. Sun + planets + major moons; same astro scale |
+| Песочница | Loads **immediately**. Empty scene |
+| **мелкие фракции** | Last in the list; does **not** replace the scene. Count chooser **100 / 500 / 2000 / 5000** (default 2000); **применить** **appends** asteroid-like masses (`~1e3…1e8` m_e) on top of the current scenario and turns **непроницаемые** on (you can turn it off afterward) |
 
 **Непроницаемые** lives on this tab (soft contact shell). It is not under **Вид**.
 
