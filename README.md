@@ -47,6 +47,7 @@ Radio list + details. Order:
 | рандомная солнечная система | Loads **immediately** (append). Random star (~0.25…4 M☉) + 4…12 planets with varied masses/radii/semi-axes, optional moons, 0…2 belts; same cosmic `AU_RE` scale, STAR ≫ PLANET ≫ MOON ≫ ASTEROID, random pack plane + per-body inclinations (as SOLAR). Also in RMB **создать здесь → сценарий** |
 | большая звезда | Loads **immediately** (append). Single `STAR`: ~100 M☉, radius ≈ 80× Sun (≫ Sun in N and rad). Tab + RMB |
 | планета со спутниками | Loads **immediately** (append). One random PLANET (rocky or giant) + moons by A/B/D mode — honest N-body only, no star/belts; random pack plane + moon inclinations. Tab + RMB |
+| группа солнечных систем | Loads **immediately** (append). ~10…20 random solar systems spatially distributed (same generator as рандомная СС / A/B/D). On apply also enables **отображение КУО** and Forces device **GPU float Barnes–Hut**. Tab + RMB |
 | Песочница | Loads **immediately**. Empty scene |
 | **мелкие фракции** | Last in the list; does **not** replace the scene. Count chooser **100 / 500 / 2000 / 5000** (default 2000); **применить** **appends** asteroid-like masses (`~3.3e2…~3.3e7` m_e) on top of the current scenario and turns **непроницаемые** on (you can turn it off afterward) |
 
