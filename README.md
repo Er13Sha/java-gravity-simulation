@@ -33,7 +33,7 @@ No Maven/Gradle. CUDA / OpenGL are optional at runtime (CPU and Java2D paths exi
 
 ## What’s in the window
 
-Theme strip (left → right): **Сценарий · вещество/частица · Тяготение · Расчёт · Вид**.  
+Theme strip (left → right): **Сценарий · Вещество/частица · Тяготение · Расчёт · Вид**.  
 Always on the right: pause, reload, reset, time speed.
 
 ### Сценарий
@@ -55,7 +55,7 @@ Radio list + details. Order:
 
 ### Other tabs (short)
 
-- **вещество/частица** — L1 groups: elementary (p/n/e), atoms, molecules (atoms-in-geometry note), model extras (dipole / custom / random); spawn mode (orbit / rest / throw) at bottom
+- **Вещество/частица** — L1 groups: Элементарные (p/n/e), Атомы, Молекулы (atoms-in-geometry note), Добавки модели (dipole / custom / random); Как добавлять (orbit / rest / throw) at bottom
 - **Тяготение** — **комплексное (КУО) only** (no «прямое» mode); β scales + G default **1** (honest / 1 chips + log₁₀ slider)
 - **Расчёт** — time speed ×⅛…×1024 (default ×1); compute path default **GPU float** (авто / CPU / GPU double / GPU float / **GPU float Barnes–Hut**); shaders
 - **Вид** — field / trails / orbits / labels / 3D axes (опоры) / **отображение КУО** (far sphere + deficit cones + q HUD, visual-only) / **полюса как стороны** (two-sided force arrows on every body, visual-only); trails, labels, опоры, KUO overlay, and poles-sides default **off**
