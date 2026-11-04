@@ -56,7 +56,7 @@ Radio list + details. Order:
 ### Other tabs (short)
 
 - **Вещество/частица** — L1 groups: Элементарные (p/n/e), Атомы, Молекулы (atoms-in-geometry note), Добавки модели (dipole / custom / random); Как добавлять (orbit / rest / throw) at bottom
-- **Тяготение** — chip **КУО** ON/OFF (default **ON** = complex; OFF = direct W=Q·N, no cyan KUO push); β scales when ON; G default **1** (honest / 1 chips + log₁₀ slider)
+- **Тяготение** — chip **КУО** ON/OFF (default **ON** = complex −β·W + cyan push; **OFF** = repulsion-only −β·W, bodies fly apart); β_т always; β_к / closed when ON; G default **1**
 - **Расчёт** — time speed ×⅛…×1024 (default ×1); compute path default **GPU float** (авто / CPU / GPU double / GPU float / **GPU float Barnes–Hut**); shaders
 - **Вид** — field / trails / orbits / labels / 3D axes (опоры) / **отображение КУО** (far sphere + deficit cones + q HUD, visual-only) / **полюса как стороны** (two-sided force arrows on every body, visual-only); **След** — у всех тел на сцене (не только круговых); trails, labels, опоры, KUO overlay, and poles-sides default **off**
 
