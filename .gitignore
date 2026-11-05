@@ -1,5 +1,5 @@
 # Application source — keep local; do not commit
-src/
+#src/
 
 # Build outputs (keep the runnable JAR for clones without source)
 build/*
