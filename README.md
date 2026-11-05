@@ -51,14 +51,19 @@ Radio list + details. Order:
 | Песочница | Loads **immediately**. Empty scene |
 | **мелкие фракции** | Last in the list; does **not** replace the scene. Count chooser **100 / 500 / 2000 / 5000** (default 2000); **применить** **appends** asteroid-like masses (`~3.3e2…~3.3e7` m_e) on top of the current scenario and turns **непроницаемые** on (you can turn it off afterward) |
 
-**Непроницаемые** lives on this tab (soft contact shell). It is not under **Вид**.
+**Контакт поверхностей: вкл/выкл** lives under **Расчёт → Отталкивание оболочек**. It toggles contact for all bodies in the current scene and preserves the scene, positions, velocities, model time and playback settings. Contact is at `R_i + R_j`; normal closing velocity is removed and tangential motion stays free. The separate **Падение на поверхность** experiment remains in **Лаборатория**.
+
+**Отталкивание оболочек** also lives here, three opt-in additions (all off by default; current physics untouched):
+- **Жёстче e–e (R3)** — electrons of **different** atoms repel `K×` stronger (`kQ·K·N_j/r²` outward), same-atom pairs unchanged; slider `K = 0…10`.
+- **Контакт поверхностей** — the global contact toggle, including the R1 contact state used by laboratory experiments. Normal impact motion is inelastic; tangential motion is preserved.
+- **В зоне overlap (R2)** — where spheres overlap (`r < max(R_i,R_j)`), extra outward force `K·W`; outside the overlap nothing changes; slider `K = 0…3`.
 
 ### Other tabs (short)
 
 - **Вещество/частица** — L1 groups: Элементарные (p/n/e), Атомы, Молекулы (atoms-in-geometry note), Добавки модели (dipole / custom / random); Как добавлять (orbit / rest / throw) at bottom
 - **Тяготение** — chip **КУО** ON/OFF (default **ON** = complex −β·W + cyan push; **OFF** = repulsion-only −β·W, bodies fly apart); β_т always; β_к / closed when ON; G default **1**
 - **Расчёт** — time speed ×⅛…×1024 (default ×1); compute path default **GPU float** (авто / CPU / GPU double / GPU float / **GPU float Barnes–Hut**); shaders
-- **Вид** — field / trails / orbits / labels / 3D axes (опоры) / **отображение КУО** (far sphere + deficit cones + q HUD, visual-only) / **полюса как стороны** (two-sided force arrows on every body, visual-only); **След** — у всех тел на сцене (не только круговых); trails, labels, опоры, KUO overlay, and poles-sides default **off**
+- **Вид** — field / trails / orbits / labels / 3D axes (опоры) / **Экватор** (surface line, visual-only, main scene and PiP) / **отображение КУО** (far sphere + deficit cones + q HUD, visual-only) / **полюса как стороны** (two-sided force arrows on every body, visual-only); **След** — у всех тел на сцене (не только круговых); trails, labels, опоры, equator, KUO overlay, and poles-sides default **off**
 
 ### Camera & keys
 

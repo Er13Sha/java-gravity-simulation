@@ -1,3 +1,5 @@
+﻿param([string]$JarPath = 'build/input/universal-interaction-formula.jar')
+
 $ErrorActionPreference = 'Stop'
 Set-Location $PSScriptRoot
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
@@ -32,22 +34,17 @@ if (-not $classesPath.StartsWith($workspacePath, [System.StringComparison]::Ordi
 if (Test-Path -LiteralPath $classesPath) { Remove-Item -LiteralPath $classesPath -Recurse -Force }
 New-Item -ItemType Directory -Force build/classes,build/input | Out-Null
 
-$sources = @(Get-ChildItem src/main/java,src/test/java -Recurse -Filter *.java | ForEach-Object FullName)
+$sources = @(Get-ChildItem src/main/java -Recurse -Filter *.java | ForEach-Object FullName)
 & "$jdk/bin/javac.exe" --release 22 -encoding UTF-8 -d build/classes $sources
 if ($LASTEXITCODE -ne 0) { throw 'Compilation failed.' }
 
-& "$jdk/bin/java.exe" '-Dstdout.encoding=UTF-8' --enable-native-access=ALL-UNNAMED -cp build/classes uif.FormulaTest
-if ($LASTEXITCODE -ne 0) { throw 'Formula tests failed.' }
-& "$jdk/bin/java.exe" '-Dstdout.encoding=UTF-8' --enable-native-access=ALL-UNNAMED -cp build/classes uif.ui.GlSceneTest
-if ($LASTEXITCODE -ne 0) { throw 'Shader tests failed.' }
-& "$jdk/bin/java.exe" '-Dstdout.encoding=UTF-8' --enable-native-access=ALL-UNNAMED -cp build/classes uif.ui.CloudTest
-if ($LASTEXITCODE -ne 0) { throw 'Cloud tests failed.' }
+# Тесты в сборку не входят: их гоняет человек (build-tests.ps1) или FormulaTest целиком.
 
 # Enable-Native-Access — чтобы окно могло вызывать драйвер видеокарты без предупреждений
 $manifest = Join-Path $PSScriptRoot 'build/manifest.txt'
 [System.IO.File]::WriteAllText($manifest, "Enable-Native-Access: ALL-UNNAMED`r`n")
-& "$jdk/bin/jar.exe" --create --file build/input/universal-interaction-formula.jar --main-class uif.Main --manifest $manifest -C build/classes .
+& "$jdk/bin/jar.exe" --create --file $JarPath --main-class uif.Main --manifest $manifest -C build/classes .
 if ($LASTEXITCODE -ne 0) { throw 'JAR creation failed.' }
 # run.bat запускает тем же JDK
 [System.IO.File]::WriteAllText((Join-Path $PSScriptRoot 'build/jdk.txt'), $jdk)
-Write-Host 'Build and tests passed.'
+Write-Host 'Build passed.'
